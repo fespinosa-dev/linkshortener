@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Link Shortener</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+</head>
+<body>
+<header>
+    <div id="logo"><a href="#" class="logo">Link Shortener</a></div>
+</header>
+<div class="main">
+    <form th:object="${link}" th:action="@{/shortener}" action="#" method="POST">
+        <div class="url-box">
+            <h1>Enter the Link to be shortened</h1>
+            <div id="formurl">
+                <input type="text" th:field="*{url}" name="link" placeholder="Enter the link here">
+                <div id="formbutton">
+                    <input type="submit" value="Shorten URL">
+                </div>
+            </div>
+            <div class="shortened-links-list">
+                <div th:each="shortLink, iStat: ${shortLinks}" class="link">
+                    <div class="short-link">
+                        <a th:id="${'short-link-'+iStat.index}" target="_blank" th:href="${shortLink}" th:text="${shortLink}">link</a>
+                    </div>
+                    <div class="copy-btn">
+                        <i data-clipboard-action="copy" th:data-clipboard-target="${'#short-link-'+iStat.index}" style="font-size:24px" class="fa">&#xf0c5;</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+</div>
+<script th:src="@{/js/clipboard.js}"></script>
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>

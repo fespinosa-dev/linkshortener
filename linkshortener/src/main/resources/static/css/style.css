@@ -1,0 +1,104 @@
+.logo {
+    font: 900 60px 'Dokdo', cursive;
+    color: #4dc57a;
+    letter-spacing: -1px;
+    text-shadow: 0 2px 2px #ddd;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+
+header {
+    text-align: center;
+}
+
+header #logo {
+    padding: 40px 20px 25px;
+}
+
+.main {
+    display: block;
+    margin: 0 auto 0 auto;
+    padding: 0 20px;
+    max-width: 1000px;
+}
+
+.url-box {
+    margin: 0 auto 20px auto;
+    max-width: 758px;
+    box-shadow: 0 1px 4px #ccc;
+    border-radius: 2px;
+    padding: 10px 30px 80px;
+    background: #fff;
+    text-align: center;
+}
+
+#formurl {
+    display: table;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#formurl input[type=text] {
+    display: table-cell;
+    width: 100%;
+    height: 56px;
+    padding: 10px 16px;
+    font: 17px lato, arial;
+    color: #000;
+    background: #fff;
+    border: 1px solid #bbb;
+    border-right: 0;
+    border-radius: 3px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    box-sizing: border-box;
+}
+
+#formurl #formbutton {
+    display: table-cell;
+    width: 1%;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+#formurl input[type=button], #formurl input[type=submit] {
+    height: 56px;
+    padding: 10px 16px;
+    font: bold 17px lato, arial;
+    color: #fff;
+    background-color: #4dc57a;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+    border: 0;
+    border-radius: 3px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -1px;
+    -webkit-appearance: button;
+    margin: 0;
+}
+
+
+.shortened-links-list {
+    margin-top: 14px;
+}
+
+.link {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 6px 8px 7px;
+    margin: 8px 0px 9px 0px;
+    -moz-box-shadow: inset 0 0 10px #4dc57a;
+    -webkit-box-shadow: inset 0 0 10px #4dc57a;
+    box-shadow: inset 0 0 4px #4dc57a;
+}
+
+.copy-btn{
+    cursor: pointer;
+}
